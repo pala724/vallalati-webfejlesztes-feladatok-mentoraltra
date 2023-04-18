@@ -1,0 +1,91 @@
+html {
+    background-color: rgb(246, 185, 17);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    max-width: 90%;
+    margin: 0% 10%;
+}
+
+h1,h2,h3 {
+    color: brown;
+    margin: 1rem;
+}
+
+.map {
+    width: 80%;
+    margin: 0 10% 0 10%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    width: 33.33%;
+    
+}
+
+li a {
+    border-radius: .8rem;
+    background-color: brown;
+    display: block;
+    color: rgb(246, 185, 17);
+    text-align: center;
+    margin: 0.5rem 0.5rem;
+    padding: 15px 50px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(246, 185, 17);
+    color: brown;
+}
+
+.offer {
+    border-radius: .8rem;
+    box-shadow: 3px 3px 10px;
+    width: 90%;
+    padding: 1rem;
+    position: relative;
+    margin: 2%;
+    background-color: rgb(226, 198, 122);
+    overflow: auto;
+}
+.offer div{
+    width: 80%;
+}
+
+.of-img {
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    right: 1%;
+    top: 0;
+    border-radius: 0.6rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+tr {
+    background-color: rgb(240, 196, 76);
+    border-radius: 0.4rem;
+
+}
+.cat{
+    text-align: center;
+    color:rgb(16, 220, 94);
+    background-color: white;
+}
+tr:nth-child(even) {
+    background-color: rgb(163, 140, 75);
+}
