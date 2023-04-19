@@ -5,15 +5,13 @@ function calcAmount() {
     let emailInput = document.querySelector("input[name='email-input']");
     let addressInput = document.querySelector("input[name='address-input']");
     let commentInput = document.querySelector("input[name='comment-input']");   
-    let extraInput = document.querySelector("input[name='extra']");
+    let extraInput = document.querySelector("input[name='extra']:checked");
     let sauceInput = document.querySelector("select[name='sauce-input']");
     let amountInput = document.querySelector("input[name='amount-input']");
-    let showAmount = document.querySelector("sapn.show-amount");
-    
+    let showAmount = document.querySelector("span.show-amount");
 
     let amountNumber = parseInt(amountInput.value);
     amountNumber = isNaN(amountNumber) ? 0 : amountNumber;
-
     let extraPrice = parseInt(extraInput.value);
     extraPrice = isNaN(extraPrice) ? 0 : extraPrice;
     let saucePrice = parseInt(sauceInput.value);
@@ -27,9 +25,9 @@ function calcAmount() {
     }
     else {
         //input to number and calculate the amount
-        let amount = (bgPrice+extraPrice+saucePrice) * amountNumber;
+        let totalPrice = (extraPrice + saucePrice + bgPrice) * amountNumber;
         //change HTML with JS and show amount
-        showAmount.innerHTML = amount;
+        showAmount.innerHTML = totalPrice;
     }
 
 }
