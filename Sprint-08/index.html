@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elérhetőségünk</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body onload="weatherStatMax(), weatherStatMin(), weatherStatAvg()">
+    <div class="container ">
+        <div class="row">
+            <div class="col weather">
+                <select name="days" id="days" class="form-select weather">
+                    <option selected value="-1">Válassz napot</option>
+                    <option value="0">Hétfő</option>
+                    <option value="1">Kedd</option>
+                    <option value="2">Szerda</option>
+                    <option value="3">Csütörtök</option>
+                    <option value="4">Péntek</option>
+                    <option value="5">Szombat</option>
+                    <option value="6">Vasárnap</option>
+                </select>
+            </div>
+            <div class="col-sm-1 weather">
+                <button onclick="weather()" type="button" class="btn btn-warning weather">Mutat</button>
+            </div>
+            <div class="col-sm weather">
+                <span id="showWeather"></span>
+            </div>
+            <div class="col-sm weather">
+                <span id="showOffer"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <span id="max"></span>
+            </div>
+            <div class="col-sm">
+                <span id="min"></span>
+            </div>
+            <div class="col-sm">
+                <span id="avg"></span>
+            </div>
+        </div>
+                
+    </div>
+    <div class="container nav-bar">
+        <div class="row ">
+            <div class="col-sm-3 nav"><a href="/index.html"> Elérhetőségünk</a></div>
+            <div class="col-sm-3 nav"><a href="/discounts.html">Akcióink</a></div>
+            <div class="col-sm-3 nav"><a href="/menu.html">Étlap</a></div>
+            <div class="col-sm-3 nav"><a href="order-form.html">Rendelés</a></div>
+        </div>
+    </div>
+    <h1>
+        Elérhetőségünk
+    </h1>
+    <div class="offer">
+        <h2>
+            Címünk
+        </h2>
+        <p>
+            1117 Budapest, Budafoki út 56.
+        </p>
+    </div>
+    <div class="offer">
+        <h2>
+            Telefonszámunk
+        </h2>
+        <p>
+            (1) 880-0048
+        </p>
+    </div>
+    <div class="offer">
+
+        <h2>
+            Nyitva tartás
+        </h2>
+        <table>
+            <tr>
+                <td>Hétfő</td>
+                <td>10:00</td>
+                <td>20:00</td>
+            </tr>
+            <tr>
+                <td>Kedd</td>
+                <td>10:00</td>
+                <td>20:00</td>
+            </tr>
+            <tr>
+                <td>Szerda</td>
+                <td>10:00</td>
+                <td>20:00</td>
+            </tr>
+            <tr>
+                <td>Csütörtök</td>
+                <td>10:00</td>
+                <td>20:00</td>
+            </tr>
+            <tr>
+                <td>Péntek</td>
+                <td>10:00</td>
+                <td>22:00</td>
+            </tr>
+            <tr>
+                <td>Szombat</td>
+                <td>10:00</td>
+                <td>22:00</td>
+            </tr>
+            <tr>
+                <td>Vasárnap</td>
+                <td>10:00</td>
+                <td>22:00</td>
+            </tr>
+        </table>
+    </div>
+    <div class="offer">
+        <h2>
+            Megközelítés
+        </h2>
+        <p>
+            Autóval a Hengermalom utcában lehet parkolni.
+        </p>
+        <p>
+            Tömegközlekedéssel a 103 busz Hengermalom úti végállomásánál, illetve a 33, 133E buszokkal a Hengermalom út
+            megállónál kell leszállni.
+        </p>
+        <img class="map" src="/src/map.png" alt="térkép">
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

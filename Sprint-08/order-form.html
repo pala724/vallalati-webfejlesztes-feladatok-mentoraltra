@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Rendelés</title>
+</head>
+<body onload="weatherStatMax(), weatherStatMin(), weatherStatAvg()">
+    <div class="container ">
+        <div class="row">
+            <div class="col weather">
+                <select name="days" id="days" class="form-select weather">
+                    <option selected value="-1">Válassz napot</option>
+                    <option value="0">Hétfő</option>
+                    <option value="1">Kedd</option>
+                    <option value="2">Szerda</option>
+                    <option value="3">Csütörtök</option>
+                    <option value="4">Péntek</option>
+                    <option value="5">Szombat</option>
+                    <option value="6">Vasárnap</option>
+                </select>
+            </div>
+            <div class="col-sm-1 weather">
+                <button onclick="weather()" type="button" class="btn btn-warning weather">Mutat</button>
+            </div>
+            <div class="col-sm weather">
+                <span id="showWeather"></span>
+            </div>
+            <div class="col-sm weather">
+                <span id="showOffer"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <span id="max"></span>
+            </div>
+            <div class="col-sm">
+                <span id="min"></span>
+            </div>
+            <div class="col-sm">
+                <span id="avg"></span>
+            </div>
+        </div>
+                
+    </div>
+    <div class="container nav-bar">
+        <div class="row ">
+            <div class="col-sm-3 nav"><a href="/index.html"> Elérhetőségünk</a></div>
+            <div class="col-sm-3 nav"><a href="/discounts.html">Akcióink</a></div>
+            <div class="col-sm-3 nav"><a href="/menu.html">Étlap</a></div>
+            <div class="col-sm-3 nav"><a href="order-form.html">Rendelés</a></div>
+        </div>
+    </div>
+    <h1>Rendelés</h1>
+
+    <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm-6">
+            <form id="ordersmain">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Név: *</label>
+                    <input type="text" class="form-control" id="name" name="name-input" required>
+                    <div id="required" class="form-text">A mező kitöltése kötelező.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email cím: *</label>
+                    <input type="text" class="form-control" id="email" name="email-input" required>
+                    <div id="required" class="form-text">A mező kitöltése kötelező.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Cím: *</label>
+                    <input type="text" class="form-control" id="address" name="address-input" required>
+                    <div id="required" class="form-text">A mező kitöltése kötelező.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="comment" class="form-label">Megjegyzés:</label>
+                    <textarea name="comment-input" class="form-control" id="comment" rows="5"></textarea>
+                </div>
+                <span>Extra feltét:</span>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="nothing" name="extra" value="0" checked>
+                    <label class="form-check-label" for="nothing">Nem kérek</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="cheese" name="extra" value="300">
+                    <label class="form-check-label" for="cheese">Sajt (+300 Ft)</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="bacon" name="extra" value="400">
+                    <label class="form-check-label" for="bacon">Bacon (+400 Ft)</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="double-meat" name="extra" value="1000">
+                    <label class="form-check-label" for="double-meat">Dupla hús (+1000 Ft)</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="cheese-bacon" name="extra" value="700">
+                    <label class="form-check-label" for="cheese-bacon">Sajt és bacon (+700 Ft)</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="cheese-double" name="extra" value="1300">
+                    <label class="form-check-label" for="cheese-double">Sajt és dupla hús (+1300 Ft)</label>
+                </div>
+                <div>
+                    <label for="sauce">Szószok</label>
+                    <select name="sauce-input" id="sauce" class="form-select mb-3">
+                        <option value="0" selected>Válassz szószt</option>
+                        <option value="0">Hagyományos</option>
+                        <option value="100">Csípős (+100 Ft)</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="amount-input">Mennyiség: </label>
+                    <input type="number" calss="form-select form-control mb-3" name="amount-input" value="1">
+                    <div class="form-text">
+                        Min 1, max 10 db
+                    </div>
+                </div>
+                <div class="mb-3">
+                    *Ár: <span class="show-amount">0</span>Ft
+                </div>
+                <button onclick="validateInput()" type="button" class="btn btn-primary">Rendelés leadása</button>
+    
+            </form>
+        </div>
+        <div class="col-sm"></div>
+        <p>*Az 5000Ft-ot meg nem haladó rendeléseknél 500Ft szállítási díjat számítunk fel.</p>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

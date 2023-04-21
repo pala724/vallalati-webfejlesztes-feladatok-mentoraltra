@@ -1,0 +1,93 @@
+html {
+    background-color: rgb(246, 185, 17);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    max-width: 90%;
+    margin: 0% 10%;
+}
+
+h1,h2,h3 {
+    color: brown;
+    margin: 1rem;
+}
+
+.map {
+    width: 80%;
+    margin: 0 10% 0 10%;
+}
+
+.nav a:hover {
+    background-color: rgb(246, 185, 17);
+    color: brown;
+}
+
+.offer {
+    border-radius: .8rem;
+    box-shadow: 3px 3px 10px;
+    width: 90%;
+    padding: 1rem;
+
+    margin: auto;
+    margin-bottom: 1rem;
+    background-color: rgb(226, 198, 122);
+}
+
+
+.of-img {
+    width: 100%;
+    border-radius: 0.6rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+tr {
+    background-color: rgb(240, 196, 76);
+    border-radius: 0.4rem;
+
+}
+.cat{
+    text-align: center;
+    color:rgb(16, 220, 94);
+    background-color: white;
+}
+tr:nth-child(even) {
+    background-color: rgb(163, 140, 75);
+}
+#ordersmain{
+    border: solid 2px brown;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+div.container {
+    background-color: brown;
+    color: rgb(246, 185, 17);
+    border-radius: .8rem;
+    width: 98%;
+    margin-bottom: 1rem;
+    
+}
+div.weather {
+    display: flex;
+    margin: 1rem;
+}
+div.nav a {
+    border-radius: .8rem;
+    background-color: brown;
+    color: rgb(246, 185, 17);
+    text-align: center;
+    margin: 0.3rem 0.5rem;
+    padding: 15px 50px;
+    text-decoration: none;
+    width: 100%;
+}
+div.container .nav-bar {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
